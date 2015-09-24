@@ -6,6 +6,8 @@ A Leiningen plugin that enforces Lupapiste coding style:
 
 ## Usage
 
+[![Clojars Project](http://clojars.org/lupapiste/lein-nitpicker/latest-version.svg)](http://clojars.org/lupapiste/lein-nitpicker)
+
 Put `[lupapiste/lein-nitpicker "0.5.1"]` into the `:plugins` vector
 of your project.clj and run:
 
