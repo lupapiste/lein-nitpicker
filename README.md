@@ -1,8 +1,10 @@
 # lein-nitpicker
 
 A Leiningen plugin that enforces Lupapiste coding style:
-  * Tabulator, carriage return an non-ascii characters are not allowed
-  * JavaScript .js files must not contain console.log calls (which would break Internet Explorer)
+  * tabulator, carriage return and non-ascii characters are not allowed
+    (for cross platform development compatibility)
+  * JavaScript files must not contain console.log calls
+    (which would break Internet Explorer).
 
 ## Usage
 
