@@ -1,7 +1,7 @@
 # lein-nitpicker
 
 A Leiningen plugin that enforces Lupapiste coding style:
-  * tabulator, carriage return and non-ascii characters are not allowed
+  * tabulator and carriage return are not allowed
     (for cross platform development compatibility)
   * JavaScript files must not contain console.log calls
     (which would break Internet Explorer).
@@ -37,6 +37,6 @@ The default configuration is:
 
 ## License
 
-Copyright © 2012-2015 Solita Oy
+Copyright © 2012-2018 Evolta Oy
 
 Distributed under the Eclipse Public License, the same as Clojure.

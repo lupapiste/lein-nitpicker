@@ -1,16 +1,12 @@
 (ns leiningen.nitpicker
   (:require [clojure.java.io :as io]
-            [leiningen.core.main])
-  (:import [java.io File]))
+            [leiningen.core.main]))
 
 (defn contains-ch? [^String s ^Character c]
   (> (.indexOf s (int c)) -1))
 
 (defn contains-string? [^String s ^String c]
   (.contains s c))
-
-(defn contains-non-ascii? [^String s]
-  (some (fn [c] (> (int c) 126)) s))
 
 (defn ext [f]
   (if-let [e (re-find #"\.[a-z]+$" (.getName f))]
@@ -39,8 +35,6 @@
       [[line-no "Contains return"]])
     (if (contains-ch? line \tab)
       [[line-no "Contains tab"]])
-    (if (contains-non-ascii? line)
-      [[line-no "Contains non-ascii characters"]])
     (if (and (not= (.getName f) "log.js") (contains-string? line "console.log"))
       [[line-no "Contains 'console.log'"]])))
 
